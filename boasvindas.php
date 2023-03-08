@@ -1,11 +1,15 @@
 <?php
 
     session_start();
-    if (isset($_SESSION['usuario'])) {
+    if (!isset($_SESSION['usuario'])) {
         header('location:form.php?erro=2');
-        die;
+        die();
+
     }
 
-    echo 'Seja bem-vindo ao site';
-
+    echo 'Seja bem-vindo ao site <br>';
 ?>
+
+<p>
+    <a href="logout.php">Sair</a>
+</p>

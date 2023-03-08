@@ -9,8 +9,11 @@
         // header('location:form.php');
     } else if($erro == 1) {
         echo 'Usuário ou senha incorretos';
-
+        
         // header('location:from.php');
+    } else if($erro == 3) {
+        echo 'Você saiu com sucesso! 👍';
+
     }
 
     // if (isset($_GET['erro'])) {
