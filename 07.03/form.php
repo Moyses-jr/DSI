@@ -22,7 +22,7 @@
 
 ?>
 
-<form action="form_receber.php" method="post">
+<form action="../form_receber.php" method="post">
     <div>
         <input type="text" name="usuario" placeholder="Usuário">
     </div>

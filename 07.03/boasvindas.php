@@ -11,5 +11,13 @@
 ?>
 
 <p>
+    <?php
+        if ($_SESSION['admin']) {
+            ?>
+            <a href="../usuario.php">Usuários</a>
+            <?php
+        }
+    ?>
+    <br>
     <a href="logout.php">Sair</a>
 </p>
