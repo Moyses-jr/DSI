@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+{% block conteudo %}
+
+    <h1>Perigo</h1>
+
+    <p> 
+        Tem certeza que seja continuar?
+    </p>
+    <p> 
+        Você irá remover o ADM
+    </p>
+
+    <form action="usuarios_demitir.php" method="post">
+        <input type="hidden" name="id" value="{{ id }}">
+        <input type="submit" value="Tira Tira ! 👀">
+    </form>
+
+    <p>
+        <a href="usuario_novo.php"> Eita! Cliquei Errado Cancela! </a>
+    </p>
+
+
+{% endblock %}

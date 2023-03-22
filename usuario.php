@@ -6,11 +6,11 @@
                              from usuarios');
     $sql -> execute();
 
-    // $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    // while ( $dados = $sql -> fetch(PDO::FETCH_ASSOC)){
-    //     echo "<p>{$dados['username']}</p>";
-    // };
+    while ( $dados = $sql -> fetch(PDO::FETCH_ASSOC)){
+        echo "<p>{$dados['username']}</p>";
+    };
 
     // $usuarios = $sql->fetchAll(PDO::FETCH_ASSOC);
     // foreach ($usuarios as $dados) {

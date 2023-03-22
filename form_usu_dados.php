@@ -16,5 +16,6 @@
 
     $sql -> execute();
 
-
+    header('location:./usuario');
+    
 ?>
