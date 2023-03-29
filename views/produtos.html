@@ -1,0 +1,34 @@
+
+{% extends "_base.html" %}
+
+{% block conteudo %}
+
+<p>Esta é a página de usuários</p>
+
+{# {{ usu[0], [username]}} #}
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Estoque</th>
+        <th>Descrição</th>
+    </tr>
+
+    {% for prod in produtos %}
+        <tr>
+            {# user.username é igual a urer['username'] #}
+            <td>{{prod.nome}}</td>
+            <td>{{prod.preco}}</td>
+            <td>{{prod.estoque ? 'Bom' : 'Sei lá'}}</td>
+            <td>{{prod.descricao}}</td>
+            {# <td>
+                <a href="usuarios_demitir.php?id={{ user.id }}">
+                    Demitir
+                </a>
+            </td> #}
+        </tr>
+     {% endfor %}   
+
+</table>
+
+{% endblock %}

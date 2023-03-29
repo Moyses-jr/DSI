@@ -10,9 +10,4 @@
     // echo $twig->render('_base.html');
     // var_dump($loader)
 
-
-
-
-
-
 ?>

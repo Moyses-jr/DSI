@@ -2,11 +2,10 @@
 
     require('pdo.inc.php');
 
-    $sql = $pdo -> prepare('select * 
-                             from usuarios');
-    $sql -> execute();
+    $sql = $pdo -> query('SELECT * FROM usuarios');
 
-    $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+    // $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     while ( $dados = $sql -> fetch(PDO::FETCH_ASSOC)){
         echo "<p>{$dados['username']}</p>";
@@ -19,15 +18,12 @@
 
 ?>
 
-<form action="./form_usu_dados.php" method="post">
-    <p><input type="text" name="nome" id=""></p>
-    <p><input type="password" name="senha" id=""></p>
+<form action="./usuario_adicionar.php" method="post">
+    <p><input type="text" name="username" id=""></p>
+    <p><input type="password" name="password" id=""></p>
     <p>
         <label for="">
-            <input type="checkbox" name="ativo" id=""> Ativo
-        </label>
-        <label for="">
-            <input type="checkbox" name="adm" id=""> Admin
+            <input type="checkbox" name="admin" id=""> Admin
         </label>
     </p>
     <p><input type="submit" value="Gravar"></p>
